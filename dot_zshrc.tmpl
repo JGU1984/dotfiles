@@ -86,3 +86,6 @@ export SDKMAN_DIR="$HOME/.sdkman"
 
 # opencode
 export PATH={{ .chezmoi.homeDir }}/.opencode/bin:$PATH
+
+# Atuin — shell history sync and search (must be near end, after other inits)
+[[ -f {{ .chezmoi.homeDir }}/.atuin/bin/atuin ]] && eval "$({{ .chezmoi.homeDir }}/.atuin/bin/atuin init zsh)"
