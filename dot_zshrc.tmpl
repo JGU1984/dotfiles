@@ -75,6 +75,9 @@ export PATH=$PATH:$GOPATH/bin
 
 export PATH="~/bin:$PATH:$HOME/.local/bin:$PATH"
 
+# opencode
+export PATH={{ .chezmoi.homeDir }}/.opencode/bin:$PATH
+
 export VISUAL=nano
 export EDITOR="$VISUAL"
 source {{ .chezmoi.homeDir }}/.config/broot/launcher/bash/br
@@ -83,9 +86,3 @@ source {{ .chezmoi.homeDir }}/.config/broot/launcher/bash/br
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-
-# opencode
-export PATH={{ .chezmoi.homeDir }}/.opencode/bin:$PATH
-
-# Atuin — shell history sync and search (must be near end, after other inits)
-[[ -f {{ .chezmoi.homeDir }}/.atuin/bin/atuin ]] && eval "$({{ .chezmoi.homeDir }}/.atuin/bin/atuin init zsh)"
