@@ -1,0 +1,5 @@
+[user]
+	name = Johan Gunnarsson
+	email = johan.gunnarsson@skymill.io
+[core]
+	editor = nano -w
