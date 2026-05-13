@@ -22,6 +22,8 @@ README.md
 *.tmp
 *.log
 *.bak
+# Just
+justfile
 # Files that should only exist in chezmoi source, not deployed to this machine
 # On your main machine (lenovoLinux), don't deploy gnome-settings.ini
 # It will be deployed on new installations with different hostnames

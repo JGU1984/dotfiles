@@ -45,3 +45,6 @@ alias saug='sudo apt upgrade'
 
 ### Exercism ###
 alias es='exercism submit'
+
+### Chezmoi ###
+alias cj='just --justfile $(chezmoi source-path)/justfile --working-directory $(chezmoi source-path)'
