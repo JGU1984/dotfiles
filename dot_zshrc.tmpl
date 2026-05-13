@@ -72,8 +72,7 @@ export PATH=$PATH:$JAVA_HOME/bin
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
-##Duplicate added for some reason, try without it to see if everthing still works
-#export PATH="~/bin:$PATH:$HOME/.local/bin:$PATH"
+export PATH="~/bin:$HOME/.local/bin:$PATH"
 
 # opencode
 export PATH={{ .chezmoi.homeDir }}/.opencode/bin:$PATH
