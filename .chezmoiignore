@@ -24,6 +24,13 @@ README.md
 *.bak
 # Just
 justfile
+# Monitor layout - hardware-specific, managed automatically by GNOME Mutter
+# Never deploy this; GNOME regenerates it on each machine based on connected hardware
+.config/monitors.xml
+
+# PulseAudio Volume Control UI state (window size/active tab) - not worth tracking
+.config/pavucontrol.ini
+
 # Files that should only exist in chezmoi source, not deployed to this machine
 # On your main machine (lenovoLinux), don't deploy gnome-settings.ini
 # It will be deployed on new installations with different hostnames

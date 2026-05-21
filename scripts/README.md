@@ -65,11 +65,32 @@ To add a new setup script:
 
 ## Updating GNOME Settings
 
-To update the GNOME settings backup on your main machine:
+To update the GNOME settings backup on your main machine, dump only the portable
+sections — **not** `dconf dump /` which would pull in hardware-specific values
+(display scaling, mouse/touchpad speeds, background paths):
 
 ```bash
-# Dump current settings
-dconf dump / > ~/.local/share/chezmoi/private_dot_config/private_dconf/gnome-settings.ini
+# Dump only portable GNOME settings
+{
+  dconf dump /org/gnome/desktop/interface/
+  dconf dump /org/gnome/settings-daemon/plugins/media-keys/
+  dconf dump /org/gnome/settings-daemon/plugins/color/
+  dconf dump /org/gnome/settings-daemon/plugins/power/
+  dconf dump /org/gnome/desktop/peripherals/keyboard/
+  dconf dump /org/gnome/desktop/wm/keybindings/
+  dconf dump /org/gnome/shell/
+  dconf dump /org/gnome/terminal/
+  dconf dump /org/gnome/desktop/input-sources/
+  dconf dump /org/gnome/desktop/session/
+  dconf dump /org/gnome/nautilus/
+  dconf dump /org/gnome/gedit/
+} > ~/.local/share/chezmoi/private_dot_config/private_dconf/gnome-settings.ini
+
+# Intentionally excluded (hardware-specific, varies per machine):
+#   /org/gnome/desktop/peripherals/mouse/    - mouse speed
+#   /org/gnome/desktop/peripherals/touchpad/ - touchpad speed
+#   /org/gnome/desktop/background/           - local image file paths
+#   text-scaling-factor (in /interface/)     - HiDPI-specific, remove if present
 
 # Review changes
 cd ~/.local/share/chezmoi
