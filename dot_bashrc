@@ -118,7 +118,7 @@ fi
 
 export VISUAL=nano
 export EDITOR="$VISUAL"
-source /home/johan/.config/broot/launcher/bash/br
+source "/$HOME/.config/broot/launcher/bash/br"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
