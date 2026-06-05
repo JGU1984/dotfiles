@@ -1,4 +1,3 @@
 [merge]
     command = "/home/johan/.local/share/JetBrains/Toolbox/apps/intellij-idea/bin/idea"
-    args = ["merge", "{{ "{{ .Destination }}" }}", "{{ "{{ .Source }}" }}", "{{ "{{ .Target }}" }}", "{{ "{{ .Destination }}" }}"]
-
+    args = ["merge", "{{ `{{ .Destination }}` }}", "{{ `{{ .Target }}` }}", "{{ `{{ .Source }}` }}", "{{ `{{ .Source }}` }}"]
