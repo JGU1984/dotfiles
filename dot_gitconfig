@@ -3,3 +3,6 @@
 	email = johan-gunnarsson@hotmail.com
 [core]
 	editor = nano -w
+
+[includeIf "gitdir:~/Gitrepository/"]
+	path = ~/.gitconfigWork
