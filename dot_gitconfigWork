@@ -1,0 +1,5 @@
+[user]
+        name = Johan Gunnarsson
+        email = johan.gunnarsson@mymoney.se
+[core]
+	excludesfile = ~/.gitignoreWork

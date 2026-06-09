@@ -1,0 +1,61 @@
+# ==========================================
+# Operating System Files
+# ==========================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+ehthumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+
+# ==========================================
+# IDEs and Editors
+# ==========================================
+# VS Code
+.vscode/
+!.vscode/extensions.json
+
+# IntelliJ / JetBrains
+.idea/
+*.iws
+*.iml
+
+# Vim / Emacs
+*.swp
+*.swo
+*~
+\#*\#
+/.emacs.desktop
+
+# ==========================================
+# Package Managers & Node (Optional safeguard)
+# ==========================================
+# Prevents accidental commits of massive local dependencies
+node_modules/
+.pnpm-store/
+
+# ==========================================
+# System Logs & Secrets
+# ==========================================
+*.log
+.env
+.env.local
+.env.*.local
+
+
+# ==========================================
+# Projects & Repos
+# ==========================================
+application-local.properties
