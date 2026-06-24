@@ -3,6 +3,8 @@
 	email = johan-gunnarsson@hotmail.com
 [core]
 	editor = nano -w
+	# Forces Git to use your personal key and bypass the ssh-agent race condition
+	 sshCommand = "ssh -i ~/.ssh/id_ed25519 -o IdentitiesOnly=yes"
 
 [includeIf "gitdir:~/Gitrepository/"]
 	path = ~/.gitconfigWork

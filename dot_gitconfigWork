@@ -2,4 +2,6 @@
         name = Johan Gunnarsson
         email = johan.gunnarsson@mymoney.se
 [core]
+	# Overrides the default and forces Git to use your work key
+        sshCommand = "ssh -i ~/.ssh/id_ed25510_mymoney -o IdentitiesOnly=yes"
 	excludesfile = ~/.gitignoreWork
