@@ -23,7 +23,7 @@ README.md
 *.log
 *.bak
 # Just
-justfile
+**/justfile
 # Monitor layout - hardware-specific, managed automatically by GNOME Mutter
 # Never deploy this; GNOME regenerates it on each machine based on connected hardware
 .config/monitors.xml

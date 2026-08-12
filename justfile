@@ -48,6 +48,23 @@ add file:
   chezmoi add {{invocation_directory()}}/{{file}}
   @echo "{{file}} added from {{invocation_directory()}}"
 
+# Re-add tracked file/files (updates all edited files if no file were provided)
+[group('files')]
+re-add FILE="":
+  #!/usr/bin/env bash
+  #Store current directory at start
+  INVOCATION_DIR="{{invocation_directory() }}"
+
+  if [ -z "{{FILE}}" ]; then
+     echo "Updating all tracked files"
+     chezmoi re-add
+     echo Done!!!
+  else
+     echo "Updating tracked file --> {{FILE}}"
+     chezmoi re-add "$INNVOCATION_DIR/{{FILE}}"
+     echo Done!!!
+  fi
+
 # Remove file from the source state, i.e. stop managing them.
 [group('files')]
 rm file:

@@ -32,6 +32,8 @@ alias g-='git switch -'
 ### Navigation ###
 alias cdg='cd ~/Gitrepository'
 alias cdh='cd ~'
+#Shell function to cd and list content
+cdl() { cd "$@" && l; }
 alias fd=fdfind
 
 ### Open File ###

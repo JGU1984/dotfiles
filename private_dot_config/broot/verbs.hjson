@@ -86,6 +86,7 @@ verbs: [
     	invocation: edit_and_leave
     	key: alt-enter
     	execution: "nano {file}"
+	apply_to: file
     	leave_broot: true
     	from_shell: true
     }
