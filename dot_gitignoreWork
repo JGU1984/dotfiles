@@ -59,3 +59,16 @@ node_modules/
 # Projects & Repos
 # ==========================================
 application-local.properties
+
+# ==========================================
+# Claude   
+# ==========================================
+
+CLAUDE.local.md
+
+.claude/settings.local.json
+
+.claude/tmp/
+.claude/cache/
+
+claude-debug.log

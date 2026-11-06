@@ -53,3 +53,7 @@ alias es='exercism submit'
 
 ### Chezmoi ###
 alias cj='just --justfile $(chezmoi source-path)/justfile --working-directory $(chezmoi source-path)'
+
+### Herdr ###
+alias h='herdr'
+alias hss='herdr server stop'
