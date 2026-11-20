@@ -31,6 +31,7 @@ alias gpl='git pull'
 alias gs='git status'
 alias gsw='git switch'
 alias g-='git switch -'
+alias glmc='git log --oneline HEAD..origin/main'
 
 ### Navigation ###
 alias cdg='cd ~/Gitrepository'
